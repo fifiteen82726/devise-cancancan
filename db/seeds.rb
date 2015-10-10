@@ -8,5 +8,8 @@
 
 
 User.destroy_all
+Question.destroy_all
 
-User.create(email: "123@gmail.com", password: "2wsx1qaz")
+user = User.create(email: "123@gmail.com", password: "2wsx1qaz")
+
+Question.create(content: "hi", user: user)
