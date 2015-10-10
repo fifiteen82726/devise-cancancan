@@ -19,6 +19,22 @@
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if question.answers.any? %>
+          <h4>Answers</h4>
+          <%= render question.answers %>
+        <% end %>
+        
+        <br>
+
+        <p>Add Answers</p>
+        <%= form_for([question,question.answers.build]) do |f| %>
+          <%= f.text_area :content %>
+          <%= submit_tag "Add" %>
+          <% end %>
+
+
+  
       </tr>
     <% end %>
   </tbody>
