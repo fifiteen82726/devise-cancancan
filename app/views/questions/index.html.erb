@@ -22,7 +22,7 @@
 
         <% if question.answers %>
           <h4>Answers</h4>
-          <% @question.answers.each do |answer| %>
+          <% question.answers.each do |answer| %>
           <p> 
              <%= answer.content %> 
           </p>
@@ -30,7 +30,7 @@
         <% end %>
 
         <br>
-        <p>Add Answers</p>ww
+        <p>Add Answers</p>
         <%= form_for([question,question.answers.build]) do |f| %>
           <%= f.text_area :content %>
           <%= submit_tag "Add" %>
