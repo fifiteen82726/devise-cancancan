@@ -15,3 +15,8 @@ user = User.create(email: "123@gmail.com", password: "2wsx1qaz")
 q = Question.create(content: "Q1", user: user)
 Answer.create(content:  "answer1", question: q, user: user)
 Answer.create(content: "answer2", question: q, user: user)
+
+
+100.times do |i|
+	Question.create(content: Faker::Commerce.department, user: user)
+end
