@@ -3,8 +3,11 @@
 <h1>Questions page</h1>
 
 
+    <% if @paginate %>
+      <%= will_paginate @paginate %>
+    <% end %>
+    
 
-  
     <% @questions.each_with_index do |question, index| %>
     <div class="question">
       
