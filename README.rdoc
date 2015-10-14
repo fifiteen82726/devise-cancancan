@@ -13,4 +13,4 @@ Things you may want to cover:
 
 * Database creation: Postgresql
 
-
+* Blog introduce(written by Chinese) :http://codachang.blogspot.tw/2015/10/rails-devise-cancancan.html
