@@ -25,6 +25,8 @@
 		<%= link_to "Log In", new_user_session_path%>
 
 	<% end %> 
+	<br>
+	<%= flash[:alert] %>
 
 <%= yield %>
 </div>

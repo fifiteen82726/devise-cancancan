@@ -12,6 +12,9 @@ Question.destroy_all
 Answer.destroy_all
 
 user = User.create(email: "123@gmail.com", password: "2wsx1qaz")
+User.create(email: "hahaha@gmail.com", password: "2wsx1qaz")
+User.create(email: "admin@gmail.com", password: "2wsx1qaz", admin: "true")
+
 q = Question.create(content: "Q1", user: user)
 Answer.create(content:  "answer1", question: q, user: user)
 Answer.create(content: "answer2", question: q, user: user)
